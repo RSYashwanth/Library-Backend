@@ -1,6 +1,6 @@
 # Library Application Backend
 
-This is the backend for the Library Client
+This is the backend for the Library Manager
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ This is the backend for the Library Client
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/RSYashwanth/Library-Backend
+   git clone https://github.com/RSYashwanth/Library-Backend.git
    ```
 2. Build a docker image:
    ```sh
