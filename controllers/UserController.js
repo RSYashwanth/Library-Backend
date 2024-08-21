@@ -6,7 +6,6 @@ const secretKey = 'randomSessionSecret';
 
 const login = async (req, res) => {
     const { username, password } = req.body;
-    console.log(username, password);
     if(!username || !password) {
         res.status(400).json({error: 'Fields cannot be empty'});
         return;
@@ -30,7 +29,6 @@ const login = async (req, res) => {
 
 const register = async (req, res) => {
     const { username, password } = req.body;
-    console.log(username, password);
     const user = await User.getUserByName(username);
     if (user) 
         return res.status(404).json({ error: 'User already exists' });
