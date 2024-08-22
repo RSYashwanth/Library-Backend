@@ -21,7 +21,7 @@ const getNumBooks = async () => {
 }
 
 const issueBook = async (id, newOwner) => {
-    const query = 'UPDATE books SET OWNER = $1 WHERE ID = $2';
+    const query = 'UPDATE books SET OWNER = $1, DATE = CURRENT_DATE WHERE ID = $2';
     await pool.query(query, [newOwner, id]);
 }
 
