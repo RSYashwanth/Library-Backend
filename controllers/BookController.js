@@ -2,7 +2,7 @@ const Book = require('../models/Book');
 
 const getBooks = async (req, res) => {
     try {
-        const { username } = req.body;
+        const username = req.params.username;
         if(!username) {
             res.status(400).json({error:"Fields cannot be null"});
             return;
@@ -26,7 +26,7 @@ const getBooks = async (req, res) => {
     }
 }
 
-const getAvailableBooks = async (req, res) => {
+const getAvailableBooks = async (_req, res) => {
     try {
         let books = await Book.getAllBooks();
         result = []; 
