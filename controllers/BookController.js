@@ -71,7 +71,7 @@ const issueBook = async (req, res) => {
             return;
         }
         await Book.issueBook(id, username);
-        res.status(200).json({message:"Issues book to "+username+" successfully"});
+        res.status(200).json({message:"Issued book to "+username+" successfully"});
     }
     catch (error) {
         console.log(error);
