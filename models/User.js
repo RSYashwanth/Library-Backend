@@ -31,9 +31,15 @@ const getAllUsers = async () => {
     return result;
 }
 
+const makeAdmin = async (username) => {
+    const query = "UPDATE users SET ADMIN='t' WHERE username = $1";
+    await pool.query(query, [username]);
+}
+
 module.exports = {
     addUser,
     getUserByName,
     getAllUsers,
-    getNumUsers
+    getNumUsers,
+    makeAdmin
 };
