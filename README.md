@@ -7,6 +7,7 @@ This is the backend application for the Library Manager
 - [Introduction](#introduction)
 - [Features](#features)
 - [Setup](#setup)
+- [Examples](#examples)
 
 ## Introduction
 
@@ -22,17 +23,18 @@ A simple backend built on RESTful principles using NodeJS, ExpressJS, and Postgr
 ## Setup
 
 1. Clone the repository:
-
    ```sh
    git clone https://github.com/RSYashwanth/Library-Backend.git
    ```
-2. Build a docker image:
+2. Build and run containers using docker-compose:
    ```sh
-   docker build -t <ImageName> .
+   docker-compose up
    ```
-3. Run docker
-   ```sh
-   docker run -p 8081:8081 <ImageName>
-   ```
-4. Follow instructions to run Client application
+3. Follow instructions to run Client application
    
+## Examples
+
+1. ![Authentication Window](images/login.png)
+2. ![Admin Window](images/admin.png)
+3. ![User Window](images/user.png)
+

@@ -1,0 +1,25 @@
+services:
+  db:
+    build:
+      context: ./db
+    container_name: library_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: AA123@gmail.com
+      POSTGRES_DB: librarydb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: .
+    container_name: library_backend 
+    depends_on:
+      - db
+    ports:
+      - "8081:8081"
+
+volumes:
+  pgdata:
